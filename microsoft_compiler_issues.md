@@ -27,3 +27,7 @@ Bug report:
 https://developercommunity.visualstudio.com/content/problem/613737/can-i-use-mmask8-in-intrinsic-functions-without-av.html
 
 The reply from Microsoft so far is not assuring (2019-08-04)
+
+### Compiler crash on blend8 instruction with Vec8q  
+Bug report:  
+https://developercommunity.visualstudio.com/content/problem/676415/vx2019-compiler-crash-on-union-in-constexpr-functi.html
