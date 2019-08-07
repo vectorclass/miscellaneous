@@ -1,11 +1,16 @@
 # Issues with Intel C++ compiler when compiling Vector Class Library
 
+### Code runs slower or not at all on AMD computers  
+Intel's compilers produce code that checks if it is running on an Intel CPU, and runs an inferior version of 
+the code if it detects a non-Intel CPU.  
+Work around: Use another compiler if the compiled code may run on a non-Intel machine.  
+Documentation: <https://www.agner.org/optimize/blog/read.php?i=63>
+
 ### constexpr function problem
 
-The Intel C++ compiler version 19 cannot compile VCL version 2.00, apparently because the 
-returns from constexpr functions is not treated as sufficiently constant.  
+The Intel C++ compiler version 19 cannot compile VCL version 2.00, apparently because of 
+problems with constexpr functions.  
 The remedy is to use version 1.xx of VCL, or use another compiler.
-
 
 ### __vectorcall incompatible
 
