@@ -26,5 +26,6 @@ Reported to Cygwin mailing list 2019-08-05
 
 ### Suboptimal use of 64-bit absolute addresses in Cygwin Clang  
 This is not a bug, but suboptimal code.  
-Reported to Cygwin mailing list 2019-08-06
-
+There appears to be confusion over which memory model to use.  
+Reported to Cygwin mailing list 2019-08-06  
+LLVM bug tracing: https://bugs.llvm.org/show_bug.cgi?id=42983
