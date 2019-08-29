@@ -31,3 +31,5 @@ The reply from Microsoft so far is not assuring (2019-08-04)
 ### Compiler crash on blend8 instruction with Vec8q  
 Bug report:  
 https://developercommunity.visualstudio.com/content/problem/676415/vx2019-compiler-crash-on-union-in-constexpr-functi.html
+Work-around and future fix, see:
+https://developercommunity.visualstudio.com/content/problem/676415/vx2019-compiler-crash-on-union-in-constexpr-functi.html?childToView=716149
