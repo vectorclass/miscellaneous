@@ -29,3 +29,7 @@ This is not a bug, but suboptimal code.
 There appears to be confusion over which memory model to use.  
 Reported to Cygwin mailing list 2019-08-06  
 LLVM bug tracing: https://bugs.llvm.org/show_bug.cgi?id=42983
+
+### Clang 9.0 crash on _ mm_hadd_pd instruction
+A workaround is implemented in release 2.01.00  
+LLVM bug tracing: https://bugs.llvm.org/show_bug.cgi?id=44111
