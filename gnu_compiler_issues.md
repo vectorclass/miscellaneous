@@ -22,6 +22,11 @@ Work around in vectormath_lib.h: __ attribute __((sysv_abi))
 __vectorcall could speed up all non-inline vector functions in 64-bit Windows.  
 Bug tracing: <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89485>
 
+### Wrong calling convention for __m256 and __m512 returns in win64  
+Gcc returns 256- and 512-bit vectors through a pointer in Win64, while all other compilers use a register.
+This can cause errors if different parts of a program are compiled with different compilers.  
+Bug tracing: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89597
+
 ### Suboptimal broadcast of static constants  
 This is not a bug, only suboptimal code.  
 Bug tracing: <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=87767>
