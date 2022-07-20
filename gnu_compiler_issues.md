@@ -2,13 +2,14 @@
 
 ### Warning: optimization attribute  
 Warning message: optimization attribute on ‘Vec2d round(Vec2d)’ follows definition but the attribute doesn’t match [-Wattributes]"  
-Work around: Use option  -Wno-attributes  
+Work around: Use option  -Wno-attributes 
+Fixed 2021
 Bug tracing: <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89325>
 
 ### Bug in intrinsic header file  
-Intrinsic function _mm256_cmp_epi8_mask returns 16 bit mask, should be 32 bit.  
+Intrinsic function \_mm256_cmp_epi8_mask returns 16 bit mask, should be 32 bit.  
 A fix appears to be underway.  
-Work around in vectori256.h function _mm256_cmp_epi8_mask_fix  
+Work around in vectori256.h function \_mm256_cmp_epi8_mask_fix  
 Bug doc: <https://patchwork.ozlabs.org/patch/940760/>
 
 ### Missing __vectorcall support  
@@ -24,7 +25,8 @@ Bug tracing: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89597
 
 ### Suboptimal broadcast of static constants  
 This is not a bug, only suboptimal code.  
-Bug tracing: <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=87767>
+Bug tracing: <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=87767>  
+Fixed 2021 in Gcc version 11 and 12
 
 ### Error: invalid register for .seh_savexmm   
 This bug occurs when compiling for Windows.  
