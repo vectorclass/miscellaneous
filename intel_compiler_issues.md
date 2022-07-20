@@ -10,7 +10,7 @@ Documentation: <https://www.agner.org/optimize/blog/read.php?i=63>
 
 The Intel C++ compiler version 19 cannot compile VCL version 2.00, apparently because of 
 problems with constexpr functions.  
-The remedy is to use version 1.xx of VCL, or use another compiler.
+Fixed in 2021 version.
 
 ### __vectorcall incompatible
 
