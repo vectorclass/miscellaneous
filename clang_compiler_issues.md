@@ -14,7 +14,8 @@ Work around in instrset.h: bit_scan_forward function given __ attribute __((noin
 Bug tracing: <https://bugs.llvm.org/show_bug.cgi?id=42883>
 
 ### Compiler crash on Vector3d rotate function with AVX instruction set  
-Bug tracing: <https://bugs.llvm.org/show_bug.cgi?id=42898>
+Bug tracing: <https://bugs.llvm.org/show_bug.cgi?id=42898>  
+Fixed in version 8.
 
 ### Cygwin clang crashes on long double mathematical functions  
 The cygwin64 version of clang causes crash on long double mathematical functions such as sqrtl, powl, etc.  
@@ -32,4 +33,5 @@ LLVM bug tracing: https://bugs.llvm.org/show_bug.cgi?id=42983
 
 ### Clang 9.0 crash on _ mm_hadd_pd instruction
 A workaround is implemented in release 2.01.00  
-LLVM bug tracing: https://bugs.llvm.org/show_bug.cgi?id=44111
+LLVM bug tracing: https://bugs.llvm.org/show_bug.cgi?id=44111  
+Fixed in version 10.
