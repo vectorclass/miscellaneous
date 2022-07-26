@@ -1,7 +1,8 @@
 ; ***************************  svml_trig_z.nasm  ***************************
 ; Author:        Agner Fog
 ; Date created:  2019-07-03
-; Version:       2.00
+; Last modified: 2022-07-23
+; Version:       2.02
 ; Project:       vector class library
 ; Description:
 ; Stubs for fixing explicit calls from 64-bit windows to Intel short vector 
@@ -18,18 +19,22 @@
 ;
 ; This assembly file uses nasm syntax. Use nasm or yasm to assemble.
 ;
-; (c) Copyright 2019 Apache licence 2.0
+; (c) Copyright 2019-2022 Apache licence 2.0
 ;******************************************************************************
 
 ; Trignometric and inverse trigonometric functions with 512-bit vectors
 
 extern __svml_sinf16, __svml_sin8, __svml_cosf16, __svml_cos8  
 extern __svml_sincosf16, __svml_sincos8, __svml_tanf16, __svml_tan8
+extern __svml_sinpif16, __svml_sinpi8, __svml_cospif16, __svml_cospi8  
+extern __svml_tanpif16, __svml_tanpi8
 extern __svml_asinf16, __svml_asin8, __svml_acosf16, __svml_acos8
 extern __svml_atanf16, __svml_atan8, __svml_atan2f16, __svml_atan28
 
 global __svml_sinf16@@64, __svml_sin8@@64, __svml_cosf16@@64, __svml_cos8@@64  
-global __svml_sincosf16@@128, __svml_sincos8@@128, __svml_tanf16@@64, __svml_tan8@@64
+global __svml_sincosf16@@64, __svml_sincos8@@64, __svml_tanf16@@64, __svml_tan8@@64
+global __svml_sinpif16@@64, __svml_sinpi8@@64, __svml_cospif16@@64, __svml_cospi8@@64  
+global __svml_tanpif16@@64, __svml_tanpi8@@64
 global __svml_asinf16@@64, __svml_asin8@@64, __svml_acosf16@@64, __svml_acos8@@64
 global __svml_atanf16@@64, __svml_atan8@@64, __svml_atan2f16@@128, __svml_atan28@@128
 
@@ -41,10 +46,16 @@ __svml_sinf16@@64: jmp __svml_sinf16
 __svml_sin8@@64: jmp __svml_sin8
 __svml_cosf16@@64: jmp __svml_cosf16
 __svml_cos8@@64: jmp __svml_cos8
-__svml_sincosf16@@128: jmp __svml_sincosf16
-__svml_sincos8@@128: jmp __svml_sincos8
+__svml_sincosf16@@64: jmp __svml_sincosf16
+__svml_sincos8@@64: jmp __svml_sincos8
 __svml_tanf16@@64: jmp __svml_tanf16
 __svml_tan8@@64: jmp __svml_tan8
+__svml_sinpif16@@64: jmp __svml_sinpif16
+__svml_sinpi8@@64: jmp __svml_sinpi8
+__svml_cospif16@@64: jmp __svml_cospif16
+__svml_cospi8@@64: jmp __svml_cospi8
+__svml_tanpif16@@64: jmp __svml_tanpif16
+__svml_tanpi8@@64: jmp __svml_tanpi8
 __svml_asinf16@@64: jmp __svml_asinf16
 __svml_asin8@@64: jmp __svml_asin8
 __svml_acosf16@@64: jmp __svml_acosf16

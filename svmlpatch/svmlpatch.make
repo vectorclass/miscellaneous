@@ -1,7 +1,8 @@
 # makefile
 # Author:        Agner Fog
 # Date created:  2019-07-03
-# Version:       2.00
+# Last modified: 2022-07-23
+# Version:       2.02
 # Project:       vector class library
 # Description:
 # Makefile for building a library of stubs for fixing explicit calls from 
@@ -10,14 +11,14 @@
 # The SVML library uses vector registers for paramters, while the default
 # calling convention for intrinsic vector types in Win64 is by pointers.
 # Some compilers (MS, Clang) allow the __vectorcall attribute which makes
-# vector paremters transferred in vector registers. Unfortunately, the 
+# vector parameters transferred in vector registers. Unfortunately, the 
 # compiler adds @@ and the total parameter size in bytes to the name,
 # even when extern "C" is specified.
 #
 # The stubs in this library fixes the name incompatibility for several functions.
-# This is a makefile for building the library using Cygwin make or similar.
+# This is a makefile for building the library using Gnu/Cygwin make or similar.
 #
-# (c) Copyright 2019 Apache licence 2.0
+# (c) Copyright 2019-2022 Apache licence 2.0
 #******************************************************************************
 
 svmlpatch.lib : svml_exp_x.obj svml_exp_y.obj svml_exp_z.obj \
